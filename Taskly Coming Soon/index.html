@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taskly — Your Errands. Handled. | Coming Soon</title>
+  <meta name="description" content="Taskly is your all-in-one errand service — bike rides, grocery delivery, courier, home services and more. Sign up to be notified when we launch.">
+  <meta name="keywords" content="taskly, rapido, bike ride, grocery delivery, courier, home services, errand service, coming soon">
+  <meta name="theme-color" content="#111111">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Loader -->
+  <div id="loader" class="loader">
+    <div class="loader-icon">
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+        <path d="M26 4L8 28H24L22 44L40 20H24L26 4Z" fill="#C8FF00" stroke="#C8FF00" stroke-width="2" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo" id="logo">
+        <svg class="logo-icon" width="24" height="24" viewBox="0 0 48 48" fill="none">
+          <path d="M26 4L8 28H24L22 44L40 20H24L26 4Z" fill="#C8FF00" stroke="#C8FF00" stroke-width="2" stroke-linejoin="round"/>
+        </svg>
+        <span class="logo-text">taskly</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#newsletter" class="nav-link">Join Us</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+    <div class="mobile-nav-content">
+      <a href="#hero" class="mobile-nav-link">Home</a>
+      <a href="#services" class="mobile-nav-link">Services</a>
+      <a href="#newsletter" class="mobile-nav-link">Join Us</a>
+      <a href="#contact" class="mobile-nav-link">Contact</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <!-- Background elements -->
+    <div class="hero-bg-elements">
+      <div class="circle-outline circle-1"></div>
+      <div class="circle-outline circle-2"></div>
+      <div class="glow-orb glow-1"></div>
+      <div class="glow-orb glow-2"></div>
+      <div class="grid-pattern"></div>
+    </div>
+
+    <div class="hero-container">
+      <div class="hero-content">
+        <!-- Coming Soon Badge -->
+        <div class="coming-soon-badge" id="coming-soon-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#C8FF00"/>
+          </svg>
+          <span>COMING SOON</span>
+        </div>
+
+        <!-- Main Heading -->
+        <h1 class="hero-heading" id="hero-heading">
+          <span class="heading-line line-1">Your</span>
+          <span class="heading-line line-2">errands.</span>
+          <span class="heading-line line-3 accent">Handled.</span>
+        </h1>
+
+        <p class="hero-description" id="hero-description">
+          Need a ride? Groceries delivered? A package picked up? Taskly connects you 
+          with reliable service partners to handle all your daily errands — instantly.
+        </p>
+
+        <!-- CTA -->
+        <div class="hero-cta" id="hero-cta">
+          <a href="#newsletter" class="btn btn-primary">
+            Get Early Access
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <button type="button" class="btn btn-ghost" id="learn-more-btn">
+            Learn More
+          </button>
+        </div>
+      </div>
+
+      <!-- Hero Visual -->
+      <div class="hero-visual" id="hero-visual">
+        <div class="hero-card">
+          <div class="card-header">
+            <div class="card-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <span class="card-title">Active Requests</span>
+          </div>
+          <div class="card-body">
+            <div class="task-item completed">
+              <div class="task-check checked">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="3">
+                  <path d="M20 6L9 17l-5-5"/>
+                </svg>
+              </div>
+              <div class="task-info">
+                <span class="task-name">🛵 Bike ride to MG Road</span>
+                <span class="task-time">Delivered</span>
+              </div>
+            </div>
+            <div class="task-item completed">
+              <div class="task-check checked">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="3">
+                  <path d="M20 6L9 17l-5-5"/>
+                </svg>
+              </div>
+              <div class="task-info">
+                <span class="task-name">🛒 Grocery from BigBasket</span>
+                <span class="task-time">Delivered</span>
+              </div>
+            </div>
+            <div class="task-item active">
+              <div class="task-check"></div>
+              <div class="task-info">
+                <span class="task-name">📦 Courier pickup — Indiranagar</span>
+                <span class="task-time">In transit</span>
+              </div>
+            </div>
+            <div class="task-item">
+              <div class="task-check"></div>
+              <div class="task-info">
+                <span class="task-name">🧹 Home cleaning — 2BHK</span>
+                <span class="task-time">3:00 PM</span>
+              </div>
+            </div>
+            <div class="task-item">
+              <div class="task-check"></div>
+              <div class="task-info">
+                <span class="task-name">👔 Laundry pickup</span>
+                <span class="task-time">5:30 PM</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 40%"></div>
+            </div>
+            <span class="progress-text">2 of 5 completed</span>
+          </div>
+        </div>
+        <!-- Floating elements -->
+        <div class="float-badge badge-1">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <path d="M22 4L12 14.01l-3-3"/>
+          </svg>
+          <span>Live tracking</span>
+        </div>
+        <div class="float-badge badge-2">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="2">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+            <path d="M2 17l10 5 10-5"/>
+            <path d="M2 12l10 5 10-5"/>
+          </svg>
+          <span>10-min delivery</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator" id="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-dot"></div>
+      </div>
+      <span>Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="features">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-label">Our Services</span>
+        <h2 class="section-title">One app for all<br>your <span class="accent">daily needs</span></h2>
+        <p class="section-description">
+          From quick rides to grocery runs — Taskly brings every service to your fingertips.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card" id="feature-1">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="2">
+              <circle cx="12" cy="18" r="2"/>
+              <path d="M6 18h4M14 18h4"/>
+              <path d="M18 18V9a2 2 0 0 0-2-2h-1l-2-4H9L7 7H5a2 2 0 0 0-2 2v9"/>
+              <circle cx="6" cy="18" r="2"/>
+              <circle cx="18" cy="18" r="2"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Bike & Auto Rides</h3>
+          <p class="feature-description">Get picked up in minutes. Affordable bike taxis and autos at your doorstep — just like Rapido.</p>
+        </div>
+
+        <div class="feature-card" id="feature-2">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="2">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+              <path d="M3 6h18"/>
+              <path d="M16 10a4 4 0 0 1-8 0"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Grocery Delivery</h3>
+          <p class="feature-description">Fresh fruits, vegetables, daily essentials — delivered to your door in under 30 minutes.</p>
+        </div>
+
+        <div class="feature-card" id="feature-3">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="2">
+              <rect x="1" y="3" width="15" height="13" rx="2"/>
+              <path d="M16 8h4l3 3v5a2 2 0 0 1-2 2h-1"/>
+              <circle cx="5.5" cy="18.5" r="2.5"/>
+              <circle cx="18.5" cy="18.5" r="2.5"/>
+              <path d="M8 18h8"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Courier & Parcels</h3>
+          <p class="feature-description">Send or receive packages across the city. Real-time tracking and same-day delivery guaranteed.</p>
+        </div>
+
+        <div class="feature-card" id="feature-4">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <path d="M9 22V12h6v10"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Home Services</h3>
+          <p class="feature-description">Cleaning, plumbing, electrician, AC repair — trusted professionals at your service, on demand.</p>
+        </div>
+
+        <div class="feature-card" id="feature-5">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="2">
+              <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+              <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+              <path d="M6 1v3M10 1v3M14 1v3"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Food Delivery</h3>
+          <p class="feature-description">Craving something? Order from your favourite local restaurants and get it delivered hot & fresh.</p>
+        </div>
+
+        <div class="feature-card" id="feature-6">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <path d="M14 2v6h6"/>
+              <path d="M16 13H8M16 17H8M10 9H8"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Bill Payments & More</h3>
+          <p class="feature-description">Recharge, pay utility bills, book gas cylinders, or get medicine delivered — all in one place.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Countdown / Newsletter Section -->
+  <section id="newsletter" class="newsletter">
+    <div class="section-container">
+      <div class="newsletter-wrapper">
+        <!-- Decorative elements -->
+        <div class="newsletter-glow"></div>
+        
+        <div class="newsletter-content">
+          <span class="section-label">Be The First</span>
+          <h2 class="section-title">Get notified when<br>we <span class="accent">launch</span></h2>
+          <p class="section-description">
+            Join our waitlist and be among the first to book rides, order groceries, 
+            and get things done with Taskly. Early users get exclusive launch-day perks.
+          </p>
+
+          <!-- Countdown Timer -->
+          <div class="countdown" id="countdown">
+            <div class="countdown-item">
+              <span class="countdown-number" id="countdown-days">00</span>
+              <span class="countdown-label">Days</span>
+            </div>
+            <div class="countdown-separator">:</div>
+            <div class="countdown-item">
+              <span class="countdown-number" id="countdown-hours">00</span>
+              <span class="countdown-label">Hours</span>
+            </div>
+            <div class="countdown-separator">:</div>
+            <div class="countdown-item">
+              <span class="countdown-number" id="countdown-minutes">00</span>
+              <span class="countdown-label">Minutes</span>
+            </div>
+            <div class="countdown-separator">:</div>
+            <div class="countdown-item">
+              <span class="countdown-number" id="countdown-seconds">00</span>
+              <span class="countdown-label">Seconds</span>
+            </div>
+          </div>
+
+          <!-- Email Subscription Form -->
+          <form id="subscribe-form" class="subscribe-form">
+            <div class="input-group">
+              <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <path d="M22 6l-10 7L2 6"/>
+              </svg>
+              <input type="email" id="subscribe-email" placeholder="Enter your email address" required autocomplete="email">
+              <button type="submit" class="btn btn-primary btn-subscribe" id="subscribe-btn">
+                <span class="btn-text">Notify Me</span>
+                <span class="btn-loader" style="display:none;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" class="spinner">
+                    <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="31.4" stroke-dashoffset="10"/>
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <div class="form-message" id="subscribe-message"></div>
+          </form>
+
+          <div class="subscriber-count">
+            <div class="avatar-stack">
+              <div class="avatar" style="background: #C8FF00; color: #111;">T</div>
+              <div class="avatar" style="background: #444;">A</div>
+              <div class="avatar" style="background: #333;">S</div>
+              <div class="avatar" style="background: #555;">K</div>
+            </div>
+            <span>Join <strong>2,400+</strong> others on the waitlist</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="section-container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <span class="section-label">Get In Touch</span>
+          <h2 class="section-title">Have a question?<br><span class="accent">Let's talk.</span></h2>
+          <p class="section-description">
+            Want to partner with us, become a delivery agent, or just have a question? 
+            Drop us a message — we'd love to hear from you.
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-detail-item">
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <path d="M22 6l-10 7L2 6"/>
+                </svg>
+              </div>
+              <div>
+                <span class="detail-label">Email</span>
+                <span class="detail-value">contact@taskly.co.in</span>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div>
+                <span class="detail-label">Location</span>
+                <span class="detail-value">India</span>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M12 6v6l4 2"/>
+                </svg>
+              </div>
+              <div>
+                <span class="detail-label">Response Time</span>
+                <span class="detail-value">Within 24 hours</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper">
+          <form id="contact-form" class="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-name">Full Name</label>
+                <input type="text" id="contact-name" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email Address</label>
+                <input type="email" id="contact-email" placeholder="john@example.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contact-subject">Subject</label>
+              <input type="text" id="contact-subject" placeholder="How can we help?">
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" rows="5" placeholder="Tell us what's on your mind..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="contact-submit-btn">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-loader" style="display:none;">
+                <svg width="20" height="20" viewBox="0 0 24 24" class="spinner">
+                  <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="31.4" stroke-dashoffset="10"/>
+                </svg>
+              </span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-arrow">
+                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+              </svg>
+            </button>
+            <div class="form-message" id="contact-message-status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="section-container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand-col">
+          <a href="#" class="logo">
+            <svg class="logo-icon" width="24" height="24" viewBox="0 0 48 48" fill="none">
+              <path d="M26 4L8 28H24L22 44L40 20H24L26 4Z" fill="#C8FF00" stroke="#C8FF00" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+            <span class="logo-text">taskly</span>
+          </a>
+          <p class="footer-tagline">Your errands. Handled.</p>
+          <p class="footer-desc">
+            India’s upcoming on-demand errand and daily service platform. 
+            Connecting you with fast bike rides, groceries, packages, and home tasks.
+          </p>
+          <div class="footer-contact-info">
+            <span>📍 Location: India</span>
+            <span>✉️ Email: contact@taskly.co.in</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-list">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><button type="button" class="footer-btn-link" id="footer-learn-more">How It Works</button></li>
+            <li><a href="#newsletter">Join Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Our Services</h4>
+          <ul class="footer-list">
+            <li><a href="#services">🛵 Bike & Auto Rides</a></li>
+            <li><a href="#services">🛒 Grocery Delivery</a></li>
+            <li><a href="#services">📦 Courier & Parcels</a></li>
+            <li><a href="#services">🧹 Home Services</a></li>
+            <li><a href="#services">🍔 Food & Medicines</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Get Early Access</h4>
+          <p class="footer-subtext">Be the first to experience Taskly across India when we officially launch.</p>
+          <div class="footer-pill">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="2">
+              <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#C8FF00"/>
+            </svg>
+            <span>Launching Soon in India 🇮🇳</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom-bar">
+        <p>&copy; 2026 Taskly Technologies India. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Partner With Us</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Learn More Modal -->
+  <div id="learn-more-modal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" id="modal-close-btn" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <span class="section-label">How Taskly Works</span>
+        <h3 class="modal-title">Errands handled in <span class="accent">3 simple steps</span></h3>
+      </div>
+      <div class="modal-body">
+        <div class="step-item">
+          <div class="step-number">01</div>
+          <div class="step-text">
+            <h4>Select Your Service</h4>
+            <p>Choose from bike rides, grocery delivery, parcel pickup, or home cleaning directly from the Taskly app.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-number">02</div>
+          <div class="step-text">
+            <h4>Matched With Partner</h4>
+            <p>Our smart dispatch instantly connects you with the nearest verified service partner in your area across India.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-number">03</div>
+          <div class="step-text">
+            <h4>Real-Time Tracking</h4>
+            <p>Track your driver or agent live on the map until your item is delivered or your task is fully completed.</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#newsletter" class="btn btn-primary" id="modal-cta-btn">Get Early Access Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Private Admin Spreadsheet Modal -->
+  <div id="admin-modal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-card modal-card-large">
+      <button class="modal-close" id="admin-modal-close-btn" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <span class="section-label">Private Admin Dashboard</span>
+        <h3 class="modal-title">Subscribed Emails & <span class="accent">Messages Spreadsheet</span></h3>
+      </div>
+      <div class="admin-actions">
+        <button id="export-excel-btn" class="btn btn-primary">
+          📊 Download Excel Spreadsheet (.csv)
+        </button>
+        <button id="clear-data-btn" class="btn btn-ghost btn-danger">
+          🗑️ Clear All Entries
+        </button>
+      </div>
+      <div class="admin-table-wrapper">
+        <table class="admin-table" id="admin-table">
+          <thead>
+            <tr>
+              <th>Date & Time</th>
+              <th>Form Type</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Subject</th>
+              <th>Message</th>
+            </tr>
+          </thead>
+          <tbody id="admin-table-body">
+            <tr>
+              <td colspan="6" style="text-align:center; color: var(--color-text-muted);">No entries collected yet. Test submitting a form!</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
